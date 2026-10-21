@@ -28,6 +28,12 @@ dfe0c8d6f9d410f2c4b4f913ca698898b4cef0a538978de40115e340dd194406
 
 Mã SHA256 của mỗi phiên bản nằm trong file `checksums.txt` đi kèm release.
 
+
+### SHA256 của gói ZIP (v3.2.4)
+
+`
+a4bde41fffebbef6a670d1424a9810d3cfda22afdc5bf6045a586dc0b249a459
+`
 ## ⚠️ Windows báo "Windows đã bảo vệ PC của bạn"?
 
 Bấm **Thông tin khác → Chạy dù đây**.
