@@ -4,10 +4,10 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 
 ## Tải bản mới nhất
 
-**v3.2.4** — 2026-10-21 · Windows 10/11 64-bit
+**v3.2.5** — 2026-10-21 · Windows 10/11 64-bit
 
-- [⬇️ Tải trực tiếp AutoCapCut-Setup-3.2.4.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.2.4.exe) (88,4 MB)
-- [⬇️ Tải gói ZIP kèm hướng dẫn cài đặt](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-v3.2.4.zip)
+- [⬇️ Tải trực tiếp AutoCapCut-Setup-3.2.5.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.2.5.exe) (88,5 MB)
+- [⬇️ Tải gói ZIP kèm hướng dẫn cài đặt](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-v3.2.5.zip)
 - [Trang Releases (tất cả phiên bản)](https://github.com/Diadz27/autocapcut-releases/releases)
 
 > Đường dẫn `/releases/latest/download/...` **tự trỏ về bản mới nhất** khi có bản mới.
@@ -17,23 +17,23 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 Mở PowerShell tại thư mục chứa file và chạy:
 
 ```powershell
-Get-FileHash .\AutoCapCut-Setup-3.2.4.exe -Algorithm SHA256
+Get-FileHash .\AutoCapCut-Setup-3.2.5.exe -Algorithm SHA256
 ```
 
 Kết quả phải là:
 
 ```
-dfe0c8d6f9d410f2c4b4f913ca698898b4cef0a538978de40115e340dd194406
+3a2ce96bfc477668ba478c2c68562c0449c5c92969322a22e8ac9738a6d896cf
 ```
 
 Mã SHA256 của mỗi phiên bản nằm trong file `checksums.txt` đi kèm release.
 
+Mã SHA256 của gói ZIP (v3.2.5):
 
-### SHA256 của gói ZIP (v3.2.4)
+```
+2b6fa59877a180d05be65f16c02b1c1fdf45f6739e2edb18e734842d84b13d9c
+```
 
-`
-a4bde41fffebbef6a670d1424a9810d3cfda22afdc5bf6045a586dc0b249a459
-`
 ## ⚠️ Windows báo "Windows đã bảo vệ PC của bạn"?
 
 Bấm **Thông tin khác → Chạy dù đây**.
@@ -45,7 +45,7 @@ Lý do: file cài đặt **chưa được ký chứng chỉ số** (Authenticode
 | Tệp | Dùng để |
 |---|---|
 | `AutoCapCut-Setup-<phiên bản>.exe` | file cài đặt |
-| `AutoCapCut-v3.2.4.zip` | gói ZIP kèm hướng dẫn cài đặt tiếng Việt |
+| `AutoCapCut-v3.2.5.zip` | gói ZIP kèm hướng dẫn cài đặt tiếng Việt |
 | `latest.yml` | tệp feed cho cơ chế tự cập nhật (electron-updater) |
 | `checksums.txt` | mã SHA256/SHA512 để kiểm tra file |
 | `release-manifest.json` | thông tin bản + hash của `app.asar` và chữ ký Ed25519 |
@@ -58,9 +58,9 @@ App tự kiểm tra bản mới mỗi lần mở (~10 giây), hoặc bấm thủ
 
 | Phiên bản | Ngày | Nội dung chính |
 |---|---|---|
-| **3.2.4** | 2026-10-21 | Sửa lỗi tải video Douyin báo "không có âm thanh" với link chuẩn (bỏ các luồng hình/tiếng tách rời của Douyin); xoá file tạm sau khi ghép video; đã thử tự cập nhật thật 3.2.2 → 3.2.3 |
-| 3.2.3 | 2026-10-21 | Sửa video Douyin 7–8 phút bị nhận nhầm thành 3 giờ; khôi phục tiếng Việt cho changelog 3.2.2; installer đổi tên theo phiên bản, bỏ tên "cracked" |
-| 3.2.2 | 2026-10-21 | Bản vá trước đó |
+| **3.2.5** | 2026-10-21 | Sửa lỗi tải video Douyin "không có âm thanh" (loại luồng DASH, tự ghép hình + tiếng bằng FFmpeg khi Douyin phát 2 luồng riêng); đăng nhập theo đúng vai trò (trước đó mọi tài khoản đều là admin); mật khẩu lưu dạng băm bcrypt; app dùng khóa API công khai mới; chặn lệnh nội bộ khi chưa đăng nhập; kiểm tra SHA-256 cho FFmpeg/Whisper |
+| 3.2.4 | 2026-10-21 | Sửa video Douyin 7–8 phút bị nhận nhầm thành 3 giờ; khôi phục tiếng Việt cho changelog 3.2.2; installer đổi tên theo phiên bản, bỏ tên "cracked" |
+| 3.2.3 | 2026-10-21 | Bản vá trước đó |
 
 Chi tiết từng mục nằm trong phần "Có gì mới" của app (tab **Cài đặt → Có gì mới**) và trong `release-notes.md` của từng release.
 
