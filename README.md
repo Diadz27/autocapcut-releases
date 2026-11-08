@@ -4,45 +4,41 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 
 ## Tải bản mới nhất
 
-**v3.4.3** - 2026-11-02 · Windows 10/11 64-bit
+**v3.4.6** - 2026-11-08 · Windows 10/11 64-bit
 
-- [Tải trực tiếp AutoCapCut-Setup-3.4.3.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.4.3.exe) (88,6 MB)
-- [Tải gói ZIP kèm hướng dẫn cài đặt](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-v3.4.3.zip)
+- [Tải trực tiếp AutoCapCut-Setup-3.4.6.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.4.6.exe) (88,7 MB)
 - [Trang Releases (tất cả phiên bản)](https://github.com/Diadz27/autocapcut-releases/releases)
 
 > Đường dẫn `/releases/latest/download/...` **tự trỏ về bản mới nhất** khi có bản mới.
 
-## Có gì mới ở 3.4.3
+## Có gì mới ở 3.4.6
 
-- **Khắc phục triệt để lỗi link Douyin Modal & Tìm kiếm**:
-  - Xử lý siêu tốc (<2 giây thay vì ~50 giây trước đây) cho link modal (`?modal_id=...`), link tìm kiếm (`/search/...`), và link dính emoji.
-  - Tích hợp 3 CDN host dự phòng (api5, api3, api.amemv.com) với Android User-Agent chuẩn.
-  - Loại bỏ hoàn toàn cảnh báo nhầm *"Không xác minh được ID video / video quảng cáo"*.
-  - Tự động trích xuất chuẩn xác thời lượng và tiêu đề gốc.
-- **Loại bỏ hoàn toàn tiến trình chạy ngầm (Zombie Process)**:
-  - Tự động đóng và huỷ sạch cửa sổ ngầm `dyWin` và tất cả tiến trình con Whisper khi người dùng tắt cửa sổ chính của app.
-  - Không còn tình trạng app chạy ngầm chiếm khóa trong Task Manager, đảm bảo mở lại ứng dụng luôn luôn thành công và mượt mà.
-- **Hỗ trợ dán trực tiếp ID video Douyin (15-25 chữ số)** và tự động làm sạch emoji/kí tự đặc biệt.
+- **Đồng bộ thị giác Review Phim (Visual Action Grounding First)**:
+  - Bắt buộc 100% câu kể bắt đầu bằng hành động vật lý cụ thể trên màn hình (quay mặt, mở cửa, rút súng, vấp ngã...), áp dụng cho toàn bộ phong cách kịch bản (`kich-tinh`, `phan-tich`, `hai-huoc`, `tau-hai`, `truc-quan`).
+  - Khóa dải phụ đề cực hẹp (1–4 dòng phụ đề, 3–15s phim) ngăn chặn triệt để hiện tượng AI sinh câu bình ngoài lề không liên quan tới hình ảnh.
+- **Triệt tiêu trôi dạt tích luỹ (Zero Cumulative Drift)**:
+  - Cài đặt cơ chế Scene-Bounded Anchor: Triệt tiêu hoàn toàn hiện tượng video chạy vượt xa phụ đề sau nhiều câu thoại.
+  - Tự do chuyển góc máy (Reverse Shot) tại cảnh đầu của câu mới mà không bị phạt điểm.
+  - Ưu tiên giữ trọn 1 cú máy liền mạch tự nhiên (1–2 cuts) cho câu ngắn, tránh băm nhỏ video thành nhiều nhát giật cục.
+- **Bảo toàn cao độ âm thanh CapCut**: Luôn sinh speed material với chuẩn `{ tone: true }` trong CapCut Draft Schema v1.5.0 bảo toàn cao độ giọng đọc.
+- **Hoàn thiện hạ tầng cập nhật tự động (Auto-Update Checksum Integrity)**:
+  - Đồng bộ 100% mã băm SHA-512 base64 và file size vào `latest.yml`, loại bỏ hoàn toàn lỗi `sha512 checksum mismatch` khi người dùng tự động cập nhật trong app.
 
 ## Kiểm tra file đã tải (khuyến nghị 1 lần)
 
 Mở PowerShell tại thư mục chứa file và chạy:
 
 ```powershell
-Get-FileHash .\AutoCapCut-Setup-3.4.3.exe -Algorithm SHA256
+Get-FileHash .\AutoCapCut-Setup-3.4.6.exe -Algorithm SHA256
 ```
 
 Kết quả phải là:
 
 ```
-b9f8ae09b4b8fb734ffe810283e354cede555240d99baa77f9baec19feed86ae
+50761f737fc7f9c6caf702f77fd11fa2a72afc1eedd055e7ae85af2b9aff9edf
 ```
 
-Mã SHA256 của gói ZIP (v3.4.3):
-
-```
-effdd3a2c1313313d1c76abc79ff4041a675f0c9906d9761ce9e99d0a848e17d
-```
+Mã SHA256 của mỗi phiên bản nằm trong file `checksums.txt` đi kèm release.
 
 ## Nếu Windows báo "Windows đã bảo vệ PC của bạn"?
 
@@ -55,7 +51,6 @@ Lý do: file cài đặt **chưa được ký chứng chỉ số** (Authenticode
 | Tệp | Dùng để |
 |---|---|
 | `AutoCapCut-Setup-<phiên bản>.exe` | file cài đặt |
-| `AutoCapCut-v3.4.3.zip` | gói ZIP kèm hướng dẫn cài đặt tiếng Việt |
 | `latest.yml` | tệp feed cho cơ chế tự cập nhật (electron-updater) |
 | `checksums.txt` | mã SHA256/SHA512 để kiểm tra file |
 | `release-manifest.json` | thông tin bản + hash của `app.asar` và chữ ký Ed25519 |
