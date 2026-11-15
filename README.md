@@ -4,40 +4,40 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 
 ## Tải bản mới nhất
 
-**v3.5.0** - 2026-11-14 · Windows 10/11 64-bit
+**v3.6.0** - 2026-11-15 · Windows 10/11 64-bit
 
-- [Tải trực tiếp AutoCapCut-Setup-3.5.0.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.5.0.exe) (88,7 MB)
+- [Tải trực tiếp AutoCapCut-Setup-3.6.0.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.6.0.exe) (87,2 MB)
 - [Trang Releases (tất cả phiên bản)](https://github.com/Diadz27/autocapcut-releases/releases)
 
 > Đường dẫn `/releases/latest/download/...` **tự trỏ về bản mới nhất** khi có bản mới.
 
-## Có gì mới ở 3.5.0
+## Có gì mới ở 3.6.0
 
-- **Khắc phục triệt để xưng hô loạn xạ (Natural Kinship Localization)**:
-  - Tự động nhận diện ngữ cảnh và chuẩn hóa quan hệ xưng hô tiếng Việt (bố - mẹ - con, vợ - chồng, anh - em, sếp - nhân viên).
-  - Loại bỏ hoàn toàn tình trạng dịch máy vô cảm gọi bố mẹ là "bạn", vợ chồng gọi nhau là "tôi - bạn".
-- **Ngụy trang & Lách từ nhạy cảm TikTok / Reels (Social Word Camouflage)**:
-  - 3 cấp độ ngụy trang (Tắt / Nhẹ nhàng / Mạnh mẽ) tự động chuyển đổi các từ cấm/nhạy cảm (chết, máu, bạo lực, tình dục, lừa đảo, cờ bạc...) sang từ lóng reup tự nhiên tiếng Việt (bay màu, đăng xuất, si rô, xôi thịt...).
-  - Áp dụng thuật toán Regex Unicode boundary chuẩn xác 100% cho tiếng Việt có dấu.
-- **Khung Prompt AI tùy chỉnh & Chip chèn biến trong Reup Content**:
-  - Giao diện trực quan cho phép người dùng tùy biến chỉ thị dịch thuật, phong cách văn phong riêng và chèn nhanh các biến ngữ cảnh qua chip bấm 1-click.
-- **6 Cấu hình AI Thông minh 1-Click (Smart Translation Profiles)**:
-  - Tích hợp sẵn 6 preset tối ưu: Siêu phẩm TikTok/Reels, Phim gia đình/Drama, Cổ trang/Tiên hiệp, Tổng tài/Đô thị, Tài liệu/Khoa học, Chuyên gia (Tùy chỉnh).
-- **Hỗ trợ toàn diện đa nền tảng Windows & macOS (Plan B)**:
-  - Đồng bộ hoá đường dẫn thư viện CapCut, hiệu ứng và bản dựng draft chuẩn xác trên cả 2 hệ điều hành.
+- **Không Gian Phân Tích Chuyên Sâu Đa Thể Loại (Deep Analysis Studio)**:
+  - Tách riêng thành một mục độc lập trên thanh điều hướng chính, phục vụ đa dạng các nhu cầu sáng tạo ngoài phim ảnh (Bán hàng & Đánh giá sản phẩm/E-commerce USP, Công nghệ & Đánh giá cấu hình, Tin tức sự kiện xã hội, Bình phim chuyên sâu & Video Essay).
+  - Bảo toàn 100% tính năng phân tích chuyên sâu truyền thống trong tab Review Phim (`reviewStyle = 'phan-tich'`).
+- **Động Cơ Lọc Bỏ Phần Thừa Thông Minh (Smart Fluff Pruner)**:
+  - Tự động phát hiện và loại bỏ các đoạn kêu gọi subscribe/like sáo rỗng, các từ đệm lan man, ngập ngừng (ừm, à, ờ, you know, actually) và khử lặp từ do nói vấp.
+- **Trích Xuất Mốc Dẫn Chứng Thời Gian [mm:ss] (Timeline Proofs)**:
+  - Gắn chính xác mốc thời gian minh chứng `[mm:ss]` vào từng luận điểm, so sánh, ưu/nhược điểm để biên tập viên nhảy thẳng đến cảnh quay tương ứng.
+- **Bộ Nạp Kịch Bản Đa Năng & Tích Hợp CapCut Drafts**:
+  - Hỗ trợ tải song song SubRip `.srt` hoặc văn bản `.txt` thô/có mốc thời gian.
+  - Tự động sinh track kịch bản độc lập mang tên `AutoCapCut Phân Tích` trực tiếp vào project CapCut với 2 chế độ: gắn cờ dẫn chứng (`proof-markers`) và đọc nối tiếp (`sequential-narration`).
+- **Tổng Rà Soát Chính Tả & Chuẩn Hóa Giao Diện Toàn Diện**:
+  - Chuẩn hóa chính tả tiếng Việt có dấu trên toàn bộ 13 tab, modal cảnh báo, hộp thoại hệ thống native và từ điển đa ngôn ngữ i18n.
 
 ## Kiểm tra file đã tải (khuyến nghị 1 lần)
 
 Mở PowerShell tại thư mục chứa file và chạy:
 
 ```powershell
-Get-FileHash .\AutoCapCut-Setup-3.5.0.exe -Algorithm SHA256
+Get-FileHash .\AutoCapCut-Setup-3.6.0.exe -Algorithm SHA256
 ```
 
 Kết quả phải là:
 
 ```
-70652e98a424676521e3efb8ec167f6bcf5c8a300bf61ff24fe6fdc9105998e8
+315c1b89a53f360496310997e3f42b3cf0829542ef8f20fde4f1352a27458bec
 ```
 
 Mã SHA256 của mỗi phiên bản nằm trong file `checksums.txt` đi kèm release.
