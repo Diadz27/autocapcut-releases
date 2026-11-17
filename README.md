@@ -4,40 +4,37 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 
 ## Tải bản mới nhất
 
-**v3.6.0** - 2026-11-15 · Windows 10/11 64-bit
+**v3.6.1** - 2026-11-18 · Windows 10/11 64-bit
 
-- [Tải trực tiếp AutoCapCut-Setup-3.6.0.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.6.0.exe) (87,2 MB)
+- [Tải trực tiếp AutoCapCut-Setup-3.6.1.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.6.1.exe) (87,3 MB)
 - [Trang Releases (tất cả phiên bản)](https://github.com/Diadz27/autocapcut-releases/releases)
 
 > Đường dẫn `/releases/latest/download/...` **tự trỏ về bản mới nhất** khi có bản mới.
 
-## Có gì mới ở 3.6.0
+## Có gì mới ở 3.6.1
 
-- **Không Gian Phân Tích Chuyên Sâu Đa Thể Loại (Deep Analysis Studio)**:
-  - Tách riêng thành một mục độc lập trên thanh điều hướng chính, phục vụ đa dạng các nhu cầu sáng tạo ngoài phim ảnh (Bán hàng & Đánh giá sản phẩm/E-commerce USP, Công nghệ & Đánh giá cấu hình, Tin tức sự kiện xã hội, Bình phim chuyên sâu & Video Essay).
-  - Bảo toàn 100% tính năng phân tích chuyên sâu truyền thống trong tab Review Phim (`reviewStyle = 'phan-tich'`).
-- **Động Cơ Lọc Bỏ Phần Thừa Thông Minh (Smart Fluff Pruner)**:
-  - Tự động phát hiện và loại bỏ các đoạn kêu gọi subscribe/like sáo rỗng, các từ đệm lan man, ngập ngừng (ừm, à, ờ, you know, actually) và khử lặp từ do nói vấp.
-- **Trích Xuất Mốc Dẫn Chứng Thời Gian [mm:ss] (Timeline Proofs)**:
-  - Gắn chính xác mốc thời gian minh chứng `[mm:ss]` vào từng luận điểm, so sánh, ưu/nhược điểm để biên tập viên nhảy thẳng đến cảnh quay tương ứng.
-- **Bộ Nạp Kịch Bản Đa Năng & Tích Hợp CapCut Drafts**:
-  - Hỗ trợ tải song song SubRip `.srt` hoặc văn bản `.txt` thô/có mốc thời gian.
-  - Tự động sinh track kịch bản độc lập mang tên `AutoCapCut Phân Tích` trực tiếp vào project CapCut với 2 chế độ: gắn cờ dẫn chứng (`proof-markers`) và đọc nối tiếp (`sequential-narration`).
-- **Tổng Rà Soát Chính Tả & Chuẩn Hóa Giao Diện Toàn Diện**:
-  - Chuẩn hóa chính tả tiếng Việt có dấu trên toàn bộ 13 tab, modal cảnh báo, hộp thoại hệ thống native và từ điển đa ngôn ngữ i18n.
+- **Mở rộng khối "Tải video" đa nền tảng (Douyin / YouTube / Bilibili)**:
+  - Hỗ trợ trích xuất và tải đồng bộ luồng media công khai (không DRM) cho **YouTube** và **Bilibili** bên cạnh **Douyin** theo cùng luồng xử lý và tuỳ chọn sẵn có.
+  - Hiển thị thông báo tiếng Việt rõ ràng khi gặp video riêng tư, có DRM, trả phí/VIP, livestream, yêu cầu đăng nhập, giới hạn vùng hoặc anti-bot.
+- **Chuẩn hoá phân giải link & Chống tải nhầm video quảng cáo**:
+  - Hỗ trợ tách và chuẩn hoá URL từ văn bản chia sẻ (kể cả đường dẫn CJK + tham số `modal_id`/`p`), xử lý chuyển hướng link rút gọn (`youtu.be`, `youtube.com/shorts`, `b23.tv`, `v.douyin.com`) và loại bỏ tham số tracking/playlist.
+  - Lọc triệt để video quảng cáo (pre-roll, overlay, banner, `uuu_265.mp4`, `adPlacements`, `raw_ad_data`) và cô lập luồng theo đúng ID mục tiêu.
+- **Đổi tên giao diện & Sửa lỗi cắt chữ Sidebar**:
+  - Đồng bộ đổi tên hiển thị mục/tab/giao diện khối tải video thành **"Tải video"** trên mọi bản dịch i18n (`vi` / `en` / `es` / `ka`).
+  - Rút gọn nhãn nút sidebar **"Phân tích chuyên sâu"** thành **"Phân tích AI"** kèm chỉnh CSS chống tràn/cắt chữ trên mọi kích thước cửa sổ.
 
 ## Kiểm tra file đã tải (khuyến nghị 1 lần)
 
 Mở PowerShell tại thư mục chứa file và chạy:
 
 ```powershell
-Get-FileHash .\AutoCapCut-Setup-3.6.0.exe -Algorithm SHA256
+Get-FileHash .\AutoCapCut-Setup-3.6.1.exe -Algorithm SHA256
 ```
 
 Kết quả phải là:
 
 ```
-315c1b89a53f360496310997e3f42b3cf0829542ef8f20fde4f1352a27458bec
+7fd94e777bd892ec10a14b61086d2a3d7ba2007df016c6309118adad138d1e7a
 ```
 
 Mã SHA256 của mỗi phiên bản nằm trong file `checksums.txt` đi kèm release.
