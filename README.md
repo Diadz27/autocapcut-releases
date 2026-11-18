@@ -4,34 +4,34 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 
 ## Tải bản mới nhất
 
-**v3.6.3** - 2026-11-18 · Windows 10/11 64-bit
+**v3.6.4** - 2026-11-18 · Windows 10/11 64-bit
 
-- [Tải trực tiếp AutoCapCut-Setup-3.6.3.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.6.3.exe) (87,4 MB)
+- [Tải trực tiếp AutoCapCut-Setup-3.6.4.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.6.4.exe) (87,4 MB)
 - [Trang Releases (tất cả phiên bản)](https://github.com/Diadz27/autocapcut-releases/releases)
 
 > Đường dẫn `/releases/latest/download/...` **tự trỏ về bản mới nhất** khi có bản mới.
 
-## Có gì mới ở 3.6.3
+## Có gì mới ở 3.6.4
 
-- **Nâng cấp đột phá mục "Phân tích AI" — Săn Highlight & Tự động Cắt Clip Ngắn Viral (TikTok / Shorts / Reels)**:
-  - Tách biệt rõ ràng với Review Phim: AI tự săn các khoảnh khắc đắt giá nhất, chấm điểm Viral (0–100), tạo Hook 3 giây đầu + Caption + Hashtag sẵn đăng và cho phép tinh chỉnh trực tiếp mốc cắt `[mm:ss - mm:ss]`.
-  - Tự động cắt hàng loạt video ngắn ra file MP4 (hỗ trợ Giữ khung gốc, Cắt nhanh Copy gốc, Dọc 9:16 Crop tâm, Dọc 9:16 Nền mờ điện ảnh, Vuông 1:1 và đốt phụ đề) kèm sẵn file phụ đề `.srt` và gói đăng bài `_post.txt`.
-  - Hỗ trợ cắt trực tiếp các đoạn clip highlight ngay trên timeline Project CapCut chỉ với 1 bấm chuột.
-- **Tải video đa nền tảng ổn định hơn**:
-  - Khắc phục lỗi tải YouTube (HTTP 403 & header lớn), hỗ trợ link Bilibili `/vi/video/BV...` & vượt HTTP 412, nhận diện link Douyin dạng `/share/note/` và chặn triệt để video quảng cáo.
+- **Nâng cấp độ ổn định tính năng "Phân tích AI" — Săn Highlight & Tự động Cắt Clip Ngắn Viral**:
+  - Xử lý an toàn video có kích thước khung hình lẻ khi giữ khung gốc hoặc đốt phụ đề, tự động kiểm tra và chặn các mốc cắt vượt quá độ dài video gốc, đồng thời phục hồi trọn vẹn danh sách clip ngay cả khi phản hồi AI bị ngắt giữa chừng.
+  - Giữ đồng bộ hình–tiếng chính xác tuyệt đối khi cắt clip trực tiếp trên timeline Project CapCut có khoảng trống giữa các đoạn video và tự dọn âm thanh dư ngoài vùng cắt.
+  - Đồng bộ chỉnh sửa mốc thời gian `[mm:ss]` trực tiếp lên file phụ đề `.srt` xuất ra và chống bấm đúp khi đang cắt trên CapCut.
+- **Kế thừa trọn vẹn tính năng v3.6.3**:
+  - Săn Highlight & Tự động Cắt Clip Ngắn Viral (TikTok / Shorts / Reels) chấm điểm 0–100, Hook 3s + Caption + Hashtag, cắt hàng loạt MP4 (Giữ gốc / Cắt nhanh Copy / 9:16 Crop / 9:16 Nền mờ / 1:1 / Đốt phụ đề) kèm `.srt` + `_post.txt` và tải video đa nền tảng YouTube / Bilibili / Douyin ổn định.
 
 ## Kiểm tra file đã tải (khuyến nghị 1 lần)
 
 Mở PowerShell tại thư mục chứa file và chạy:
 
 ```powershell
-Get-FileHash .\AutoCapCut-Setup-3.6.3.exe -Algorithm SHA256
+Get-FileHash .\AutoCapCut-Setup-3.6.4.exe -Algorithm SHA256
 ```
 
 Kết quả phải là:
 
 ```
-f34728ca8c4ccccdcc1b410f0a07e428fba87a6b6b3b181a2738c8ff9162bb5d
+5ab7624ba288f4f0ce9fd8c058e50ba7998eb5025f5e97fa9791e9ab874a61c0
 ```
 
 Mã SHA256 của mỗi phiên bản nằm trong file `checksums.txt` đi kèm release.
