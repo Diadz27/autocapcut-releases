@@ -4,34 +4,39 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 
 ## Tải bản mới nhất
 
-**v3.7.0** - 2026-11-18 · Windows 10/11 64-bit
+**v3.7.1** - 2026-11-19 · Windows 10/11 64-bit
 
-- [Tải trực tiếp AutoCapCut-Setup-3.7.0.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.7.0.exe) (87,4 MB)
+- [Tải trực tiếp AutoCapCut-Setup-3.7.1.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.7.1.exe) (88,9 MB)
 - [Trang Releases (tất cả phiên bản)](https://github.com/Diadz27/autocapcut-releases/releases)
 
 > Đường dẫn `/releases/latest/download/...` **tự trỏ về bản mới nhất** khi có bản mới.
 
-## Có gì mới ở 3.6.5
+## Có gì mới ở 3.7.1
 
-- **Nâng cấp độ ổn định tính năng "Phân tích AI" — Săn Highlight & Tự động Cắt Clip Ngắn Viral**:
-  - Xử lý an toàn video có kích thước khung hình lẻ khi giữ khung gốc hoặc đốt phụ đề, tự động kiểm tra và chặn các mốc cắt vượt quá độ dài video gốc, đồng thời phục hồi trọn vẹn danh sách clip ngay cả khi phản hồi AI bị ngắt giữa chừng.
-  - Giữ đồng bộ hình–tiếng chính xác tuyệt đối khi cắt clip trực tiếp trên timeline Project CapCut có khoảng trống giữa các đoạn video và tự dọn âm thanh dư ngoài vùng cắt.
-  - Đồng bộ chỉnh sửa mốc thời gian `[mm:ss]` trực tiếp lên file phụ đề `.srt` xuất ra và chống bấm đúp khi đang cắt trên CapCut.
-- **Kế thừa trọn vẹn tính năng v3.7.0**:
-  - Săn Highlight & Tự động Cắt Clip Ngắn Viral (TikTok / Shorts / Reels) chấm điểm 0–100, Hook 3s + Caption + Hashtag, cắt hàng loạt MP4 (Giữ gốc / Cắt nhanh Copy / 9:16 Crop / 9:16 Nền mờ / 1:1 / Đốt phụ đề) kèm `.srt` + `_post.txt` và tải video đa nền tảng YouTube / Bilibili / Douyin ổn định.
+- **Tái cấu trúc Studio Edit & Review (3 Sub-Studio chuyên biệt)**:
+  - Tách bạch rõ ràng 3 không gian làm việc: `Review Phim Dài` (Ctrl+1), `AI Auto-Edit & Săn Highlight Viral` (Ctrl+2), và `Hậu Kỳ Độc Lập Cho Project` (Ctrl+3).
+  - Tích hợp bộ 3 thẻ Visual Style 1-Click: Highlight Thể Thao Phonk Beat-Sync, Shorts Karaoke Cyan Dual-Track, và Sitcom Đa Vai.
+- **Công nghệ 1-Click AI Auto-Edit Đa Tầng (Offline 100%, 0 Token AI)**:
+  - Động cơ bắt nhịp Beat & Bass Drop bằng FFT chỉ 225ms.
+  - Săn cao trào reo hò thể thao / bàn thắng kèm Dynamic Lookback Buffer (-10s -> +5s) trong 94ms.
+  - Auto-Reframe 9:16 bám chuyển động với thuật toán RDP Decimation (<= 25 điểm/clip) giúp CapCut Desktop chạy mượt mà 60fps.
+  - Phụ đề Karaoke Dual-Track đổi màu Cyan/Gold vi mô theo từng từ đang đọc.
+- **Sửa triệt để lỗi giao diện & Khởi động sạch sẽ**:
+  - Sửa lỗi tràn chữ, đè chữ tại bảng tùy chọn kịch bản: tái cấu trúc lưới .review-options-grid, chống va chạm giữa ô Bắt cảnh cao trào và Hook đầu video, hiển thị đầy đủ tên Model AI.
+  - Khởi động sạch sẽ: Tự động dọn dẹp kịch bản cũ khi mở app và cất kín vào Recovery Storage để chỉ khôi phục khi người dùng chủ động chọn.
 
 ## Kiểm tra file đã tải (khuyến nghị 1 lần)
 
 Mở PowerShell tại thư mục chứa file và chạy:
 
 ```powershell
-Get-FileHash .\AutoCapCut-Setup-3.7.0.exe -Algorithm SHA256
+Get-FileHash .\AutoCapCut-Setup-3.7.1.exe -Algorithm SHA256
 ```
 
 Kết quả phải là:
 
 ```
-28dd8e1c6b72be1f852363607d6dc947d8b7d05ef50039a184a30caa072d3f87
+af1a85e7d6f37a7845a58274d141f2da777098f0f65e03755956b6c7cbb33255
 ```
 
 Mã SHA256 của mỗi phiên bản nằm trong file `checksums.txt` đi kèm release.
@@ -41,6 +46,15 @@ Mã SHA256 của mỗi phiên bản nằm trong file `checksums.txt` đi kèm re
 Bấm **Thông tin khác → Chạy dù sao**.
 
 Lý do: file cài đặt **chưa được ký chứng chỉ số** (Authenticode) nên Windows cảnh báo với mọi file mới của tác giả chưa ký. Đây không phải virus - hãy kiểm tra SHA256 ở trên nếu cần xác nhận.
+
+## Bản trong release
+
+| Tệp | Dùng để |
+|---|---|
+| `AutoCapCut-Setup-<phiên bản>.exe` | file cài đặt |
+| `latest.yml` | tệp feed cho cơ chế tự cập nhật (electron-updater) |
+| `checksums.txt` | mã SHA256/SHA512 để kiểm tra file |
+| `release-manifest.json` | thông tin bản + hash của `app.asar` và chữ ký Ed25519 |
 
 ## Dùng thử 2 giờ
 
