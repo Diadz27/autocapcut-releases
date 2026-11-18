@@ -4,9 +4,9 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 
 ## Tải bản mới nhất
 
-**v3.6.5** - 2026-11-18 · Windows 10/11 64-bit
+**v3.7.0** - 2026-11-18 · Windows 10/11 64-bit
 
-- [Tải trực tiếp AutoCapCut-Setup-3.6.5.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.6.5.exe) (87,4 MB)
+- [Tải trực tiếp AutoCapCut-Setup-3.7.0.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.7.0.exe) (87,4 MB)
 - [Trang Releases (tất cả phiên bản)](https://github.com/Diadz27/autocapcut-releases/releases)
 
 > Đường dẫn `/releases/latest/download/...` **tự trỏ về bản mới nhất** khi có bản mới.
@@ -17,7 +17,7 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
   - Xử lý an toàn video có kích thước khung hình lẻ khi giữ khung gốc hoặc đốt phụ đề, tự động kiểm tra và chặn các mốc cắt vượt quá độ dài video gốc, đồng thời phục hồi trọn vẹn danh sách clip ngay cả khi phản hồi AI bị ngắt giữa chừng.
   - Giữ đồng bộ hình–tiếng chính xác tuyệt đối khi cắt clip trực tiếp trên timeline Project CapCut có khoảng trống giữa các đoạn video và tự dọn âm thanh dư ngoài vùng cắt.
   - Đồng bộ chỉnh sửa mốc thời gian `[mm:ss]` trực tiếp lên file phụ đề `.srt` xuất ra và chống bấm đúp khi đang cắt trên CapCut.
-- **Kế thừa trọn vẹn tính năng v3.6.3**:
+- **Kế thừa trọn vẹn tính năng v3.7.0**:
   - Săn Highlight & Tự động Cắt Clip Ngắn Viral (TikTok / Shorts / Reels) chấm điểm 0–100, Hook 3s + Caption + Hashtag, cắt hàng loạt MP4 (Giữ gốc / Cắt nhanh Copy / 9:16 Crop / 9:16 Nền mờ / 1:1 / Đốt phụ đề) kèm `.srt` + `_post.txt` và tải video đa nền tảng YouTube / Bilibili / Douyin ổn định.
 
 ## Kiểm tra file đã tải (khuyến nghị 1 lần)
@@ -25,13 +25,13 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 Mở PowerShell tại thư mục chứa file và chạy:
 
 ```powershell
-Get-FileHash .\AutoCapCut-Setup-3.6.5.exe -Algorithm SHA256
+Get-FileHash .\AutoCapCut-Setup-3.7.0.exe -Algorithm SHA256
 ```
 
 Kết quả phải là:
 
 ```
-010605139e86b764dd9eb0f587aefe9ad961182127d729661320672ffdd2f7dc
+28dd8e1c6b72be1f852363607d6dc947d8b7d05ef50039a184a30caa072d3f87
 ```
 
 Mã SHA256 của mỗi phiên bản nằm trong file `checksums.txt` đi kèm release.
