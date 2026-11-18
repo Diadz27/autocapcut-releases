@@ -4,14 +4,14 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 
 ## Tải bản mới nhất
 
-**v3.6.1** - 2026-11-18 · Windows 10/11 64-bit
+**v3.6.2** - 2026-11-18 · Windows 10/11 64-bit
 
-- [Tải trực tiếp AutoCapCut-Setup-3.6.1.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.6.1.exe) (87,3 MB)
+- [Tải trực tiếp AutoCapCut-Setup-3.6.2.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.6.2.exe) (87,3 MB)
 - [Trang Releases (tất cả phiên bản)](https://github.com/Diadz27/autocapcut-releases/releases)
 
 > Đường dẫn `/releases/latest/download/...` **tự trỏ về bản mới nhất** khi có bản mới.
 
-## Có gì mới ở 3.6.1
+## Có gì mới ở 3.6.2
 
 - **Mở rộng khối "Tải video" đa nền tảng (Douyin / YouTube / Bilibili)**:
   - Hỗ trợ trích xuất và tải đồng bộ luồng media công khai (không DRM) cho **YouTube** và **Bilibili** bên cạnh **Douyin** theo cùng luồng xử lý và tuỳ chọn sẵn có.
@@ -28,13 +28,13 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 Mở PowerShell tại thư mục chứa file và chạy:
 
 ```powershell
-Get-FileHash .\AutoCapCut-Setup-3.6.1.exe -Algorithm SHA256
+Get-FileHash .\AutoCapCut-Setup-3.6.2.exe -Algorithm SHA256
 ```
 
 Kết quả phải là:
 
 ```
-7fd94e777bd892ec10a14b61086d2a3d7ba2007df016c6309118adad138d1e7a
+83a21db15da5f822fa527765dcaa14e00683d61fcae55e55f9a1268c9da3b7f5
 ```
 
 Mã SHA256 của mỗi phiên bản nằm trong file `checksums.txt` đi kèm release.
