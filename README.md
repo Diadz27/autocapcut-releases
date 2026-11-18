@@ -4,37 +4,34 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 
 ## Tải bản mới nhất
 
-**v3.6.2** - 2026-11-18 · Windows 10/11 64-bit
+**v3.6.3** - 2026-11-18 · Windows 10/11 64-bit
 
-- [Tải trực tiếp AutoCapCut-Setup-3.6.2.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.6.2.exe) (87,3 MB)
+- [Tải trực tiếp AutoCapCut-Setup-3.6.3.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.6.3.exe) (87,4 MB)
 - [Trang Releases (tất cả phiên bản)](https://github.com/Diadz27/autocapcut-releases/releases)
 
 > Đường dẫn `/releases/latest/download/...` **tự trỏ về bản mới nhất** khi có bản mới.
 
-## Có gì mới ở 3.6.2
+## Có gì mới ở 3.6.3
 
-- **Mở rộng khối "Tải video" đa nền tảng (Douyin / YouTube / Bilibili)**:
-  - Hỗ trợ trích xuất và tải đồng bộ luồng media công khai (không DRM) cho **YouTube** và **Bilibili** bên cạnh **Douyin** theo cùng luồng xử lý và tuỳ chọn sẵn có.
-  - Hiển thị thông báo tiếng Việt rõ ràng khi gặp video riêng tư, có DRM, trả phí/VIP, livestream, yêu cầu đăng nhập, giới hạn vùng hoặc anti-bot.
-- **Chuẩn hoá phân giải link & Chống tải nhầm video quảng cáo**:
-  - Hỗ trợ tách và chuẩn hoá URL từ văn bản chia sẻ (kể cả đường dẫn CJK + tham số `modal_id`/`p`), xử lý chuyển hướng link rút gọn (`youtu.be`, `youtube.com/shorts`, `b23.tv`, `v.douyin.com`) và loại bỏ tham số tracking/playlist.
-  - Lọc triệt để video quảng cáo (pre-roll, overlay, banner, `uuu_265.mp4`, `adPlacements`, `raw_ad_data`) và cô lập luồng theo đúng ID mục tiêu.
-- **Đổi tên giao diện & Sửa lỗi cắt chữ Sidebar**:
-  - Đồng bộ đổi tên hiển thị mục/tab/giao diện khối tải video thành **"Tải video"** trên mọi bản dịch i18n (`vi` / `en` / `es` / `ka`).
-  - Rút gọn nhãn nút sidebar **"Phân tích chuyên sâu"** thành **"Phân tích AI"** kèm chỉnh CSS chống tràn/cắt chữ trên mọi kích thước cửa sổ.
+- **Nâng cấp đột phá mục "Phân tích AI" — Săn Highlight & Tự động Cắt Clip Ngắn Viral (TikTok / Shorts / Reels)**:
+  - Tách biệt rõ ràng với Review Phim: AI tự săn các khoảnh khắc đắt giá nhất, chấm điểm Viral (0–100), tạo Hook 3 giây đầu + Caption + Hashtag sẵn đăng và cho phép tinh chỉnh trực tiếp mốc cắt `[mm:ss - mm:ss]`.
+  - Tự động cắt hàng loạt video ngắn ra file MP4 (hỗ trợ Giữ khung gốc, Cắt nhanh Copy gốc, Dọc 9:16 Crop tâm, Dọc 9:16 Nền mờ điện ảnh, Vuông 1:1 và đốt phụ đề) kèm sẵn file phụ đề `.srt` và gói đăng bài `_post.txt`.
+  - Hỗ trợ cắt trực tiếp các đoạn clip highlight ngay trên timeline Project CapCut chỉ với 1 bấm chuột.
+- **Tải video đa nền tảng ổn định hơn**:
+  - Khắc phục lỗi tải YouTube (HTTP 403 & header lớn), hỗ trợ link Bilibili `/vi/video/BV...` & vượt HTTP 412, nhận diện link Douyin dạng `/share/note/` và chặn triệt để video quảng cáo.
 
 ## Kiểm tra file đã tải (khuyến nghị 1 lần)
 
 Mở PowerShell tại thư mục chứa file và chạy:
 
 ```powershell
-Get-FileHash .\AutoCapCut-Setup-3.6.2.exe -Algorithm SHA256
+Get-FileHash .\AutoCapCut-Setup-3.6.3.exe -Algorithm SHA256
 ```
 
 Kết quả phải là:
 
 ```
-83a21db15da5f822fa527765dcaa14e00683d61fcae55e55f9a1268c9da3b7f5
+f34728ca8c4ccccdcc1b410f0a07e428fba87a6b6b3b181a2738c8ff9162bb5d
 ```
 
 Mã SHA256 của mỗi phiên bản nằm trong file `checksums.txt` đi kèm release.
@@ -44,15 +41,6 @@ Mã SHA256 của mỗi phiên bản nằm trong file `checksums.txt` đi kèm re
 Bấm **Thông tin khác → Chạy dù sao**.
 
 Lý do: file cài đặt **chưa được ký chứng chỉ số** (Authenticode) nên Windows cảnh báo với mọi file mới của tác giả chưa ký. Đây không phải virus - hãy kiểm tra SHA256 ở trên nếu cần xác nhận.
-
-## Bản trong release
-
-| Tệp | Dùng để |
-|---|---|
-| `AutoCapCut-Setup-<phiên bản>.exe` | file cài đặt |
-| `latest.yml` | tệp feed cho cơ chế tự cập nhật (electron-updater) |
-| `checksums.txt` | mã SHA256/SHA512 để kiểm tra file |
-| `release-manifest.json` | thông tin bản + hash của `app.asar` và chữ ký Ed25519 |
 
 ## Dùng thử 2 giờ
 
