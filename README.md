@@ -4,14 +4,14 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 
 ## Tải bản mới nhất
 
-**v3.6.4** - 2026-11-18 · Windows 10/11 64-bit
+**v3.6.5** - 2026-11-18 · Windows 10/11 64-bit
 
-- [Tải trực tiếp AutoCapCut-Setup-3.6.4.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.6.4.exe) (87,4 MB)
+- [Tải trực tiếp AutoCapCut-Setup-3.6.5.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.6.5.exe) (87,4 MB)
 - [Trang Releases (tất cả phiên bản)](https://github.com/Diadz27/autocapcut-releases/releases)
 
 > Đường dẫn `/releases/latest/download/...` **tự trỏ về bản mới nhất** khi có bản mới.
 
-## Có gì mới ở 3.6.4
+## Có gì mới ở 3.6.5
 
 - **Nâng cấp độ ổn định tính năng "Phân tích AI" — Săn Highlight & Tự động Cắt Clip Ngắn Viral**:
   - Xử lý an toàn video có kích thước khung hình lẻ khi giữ khung gốc hoặc đốt phụ đề, tự động kiểm tra và chặn các mốc cắt vượt quá độ dài video gốc, đồng thời phục hồi trọn vẹn danh sách clip ngay cả khi phản hồi AI bị ngắt giữa chừng.
@@ -25,13 +25,13 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 Mở PowerShell tại thư mục chứa file và chạy:
 
 ```powershell
-Get-FileHash .\AutoCapCut-Setup-3.6.4.exe -Algorithm SHA256
+Get-FileHash .\AutoCapCut-Setup-3.6.5.exe -Algorithm SHA256
 ```
 
 Kết quả phải là:
 
 ```
-5ab7624ba288f4f0ce9fd8c058e50ba7998eb5025f5e97fa9791e9ab874a61c0
+010605139e86b764dd9eb0f587aefe9ad961182127d729661320672ffdd2f7dc
 ```
 
 Mã SHA256 của mỗi phiên bản nằm trong file `checksums.txt` đi kèm release.
