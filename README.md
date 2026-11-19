@@ -4,39 +4,38 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 
 ## Tải bản mới nhất
 
-**v3.7.1** - 2026-11-19 · Windows 10/11 64-bit
+**v3.7.3** - 2026-11-19 · Windows 10/11 64-bit
 
-- [Tải trực tiếp AutoCapCut-Setup-3.7.1.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.7.1.exe) (88,9 MB)
+- [Tải trực tiếp AutoCapCut-Setup-3.7.3.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.7.3.exe) (89,0 MB)
 - [Trang Releases (tất cả phiên bản)](https://github.com/Diadz27/autocapcut-releases/releases)
 
 > Đường dẫn `/releases/latest/download/...` **tự trỏ về bản mới nhất** khi có bản mới.
 
-## Có gì mới ở 3.7.1
+## Có gì mới ở 3.7.3
 
-- **Tái cấu trúc Studio Edit & Review (3 Sub-Studio chuyên biệt)**:
-  - Tách bạch rõ ràng 3 không gian làm việc: `Review Phim Dài` (Ctrl+1), `AI Auto-Edit & Săn Highlight Viral` (Ctrl+2), và `Hậu Kỳ Độc Lập Cho Project` (Ctrl+3).
-  - Tích hợp bộ 3 thẻ Visual Style 1-Click: Highlight Thể Thao Phonk Beat-Sync, Shorts Karaoke Cyan Dual-Track, và Sitcom Đa Vai.
-- **Công nghệ 1-Click AI Auto-Edit Đa Tầng (Offline 100%, 0 Token AI)**:
-  - Động cơ bắt nhịp Beat & Bass Drop bằng FFT chỉ 225ms.
-  - Săn cao trào reo hò thể thao / bàn thắng kèm Dynamic Lookback Buffer (-10s -> +5s) trong 94ms.
-  - Auto-Reframe 9:16 bám chuyển động với thuật toán RDP Decimation (<= 25 điểm/clip) giúp CapCut Desktop chạy mượt mà 60fps.
-  - Phụ đề Karaoke Dual-Track đổi màu Cyan/Gold vi mô theo từng từ đang đọc.
-- **Sửa triệt để lỗi giao diện & Khởi động sạch sẽ**:
-  - Sửa lỗi tràn chữ, đè chữ tại bảng tùy chọn kịch bản: tái cấu trúc lưới .review-options-grid, chống va chạm giữa ô Bắt cảnh cao trào và Hook đầu video, hiển thị đầy đủ tên Model AI.
-  - Khởi động sạch sẽ: Tự động dọn dẹp kịch bản cũ khi mở app và cất kín vào Recovery Storage để chỉ khôi phục khi người dùng chủ động chọn.
+- **Khắc phục triệt để lỗi Whisper DLL 3221225781 (0xC0000135) & Auto CPU Fallback**:
+  - Tự động tiêm đường dẫn `PATH` chứa DLL và thiết lập thư mục làm việc chuẩn xác trước khi gọi runtime Whisper GPU.
+  - Cơ chế tự tải kèm bản CPU 3.5MB dự phòng khi tải mô hình GPU, tự động chuyển đổi mượt mà sang CPU khi GPU crash hoặc thiếu phụ thuộc driver, đảm bảo nhận dạng giọng nói không bao giờ gián đoạn.
+  - Bộ lọc chống lặp từ và đồng bộ bù trừ thời gian VAD giúp phụ đề khớp khẩu hình chính xác.
+- **Tích hợp Công nghệ AI Voiceover & Audio Ducking Đa Tầng**:
+  - Tự động hạ âm lượng nền (audio ducking) video gốc xuống 15% (-16.5dB) ngay khi xuất hiện giọng thuyết minh AI.
+  - Giữ âm lượng Hook 3 giây đầu ở mức 25% tạo độ hút người xem, tự động lùi mốc phát giọng đọc AI sau phân đoạn Hook để tránh xung đột âm thanh.
+- **Bảo Mật Cấp Cao Ed25519 & Cổng Gói Khách Hàng Fail-Closed**:
+  - Chữ ký bất đối xứng Ed25519 bảo vệ `app.asar`, loại bỏ hoàn toàn HMAC secret, thực thi chính sách fail-closed tuyệt đối.
+  - Gói ZIP thương mại tuân thủ whitelist 2 tệp duy nhất, đối soát SHA-256 trùng khớp 100%, ngăn chặn hoàn toàn rò rỉ mã nguồn.
 
 ## Kiểm tra file đã tải (khuyến nghị 1 lần)
 
 Mở PowerShell tại thư mục chứa file và chạy:
 
 ```powershell
-Get-FileHash .\AutoCapCut-Setup-3.7.1.exe -Algorithm SHA256
+Get-FileHash .\AutoCapCut-Setup-3.7.3.exe -Algorithm SHA256
 ```
 
 Kết quả phải là:
 
 ```
-af1a85e7d6f37a7845a58274d141f2da777098f0f65e03755956b6c7cbb33255
+a1ecd2bf85a889316cef51656ade1f14da2d634da94ea3e312289140e3c69fac
 ```
 
 Mã SHA256 của mỗi phiên bản nằm trong file `checksums.txt` đi kèm release.
