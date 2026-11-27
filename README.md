@@ -4,37 +4,36 @@ Repo này chỉ chứa **file cài đặt** (không chứa mã nguồn).
 
 ## Tải bản mới nhất
 
-**v3.8.0** - 2026-11-26 · Windows 10/11 64-bit
+**v3.8.1** - 2026-11-28 · Windows 10/11 64-bit
 
-- [Tải trực tiếp AutoCapCut-Setup-3.8.0.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.8.0.exe) (88,7 MB)
+- [Tải trực tiếp AutoCapCut-Setup-3.8.1.exe](https://github.com/Diadz27/autocapcut-releases/releases/latest/download/AutoCapCut-Setup-3.8.1.exe) (88,9 MB)
 - [Trang Releases (tất cả phiên bản)](https://github.com/Diadz27/autocapcut-releases/releases)
 
 > Đường dẫn `/releases/latest/download/...` **tự trỏ về bản mới nhất** khi có bản mới.
 
-## Có gì mới ở 3.8.0
+## Có gì mới ở 3.8.1
 
-- **Storyboard AI (Kịch bản thành hình ảnh)**:
-  - Dán kịch bản hoặc nạp `.srt` / `.txt` / `.vtt`, chia cảnh thông minh (hỗ trợ chia cảnh ngoại tuyến dự phòng giữ nguyên 100% nội dung), chỉnh sửa/tách/gộp/xoá cảnh, tạo prompt hình ảnh theo phong cách & góc máy, tạo ảnh bằng Gemini API và xuất Storyboard Pack đầy đủ.
-  - Khoá Gemini API được mã hoá cục bộ bằng Windows DPAPI ngay trong Cài đặt, chỉ gọi API khi bạn bấm nút.
-- **Review Phim offline gọn và dễ dùng hơn**:
-  - 6 chip gợi ý luật chia phụ đề (bấm là điền, không cần nhớ cú pháp), badge hiển thị ngay thông số máy hiểu dưới ô lệnh, mẫu phong cách tự viết và nút Xoá luật.
-- **Whisper cục bộ nâng cấp độ ổn định**:
-  - Vá lỗi mất đoạn thoại cuối phim, chạy nền không đơ giao diện, tự bỏ cắt khoảng lặng (VAD) cho clip ngắn từ 60 giây trở xuống để giữ trọn đầu/cuối câu thoại và hiển thị tiến độ 4 pha rõ ràng.
-- **Reup & Tải video đa nền tảng (Douyin / YouTube / Bilibili) gọn nhẹ**:
-  - Hoạt động độc lập với Whisper cục bộ, phân vai ngoại tuyến và biến đổi Reup tránh bản quyền, khởi động nhanh và tập trung vào bộ công cụ dựng CapCut cốt lõi.
+- **Review Phim luồng 3 bước & chọn thời lượng tổng**:
+  - Sắp xếp rõ 3 bước (Chọn project & phụ đề → Chọn thời lượng & lời bình → Dựng CapCut), chọn mục tiêu ngay đầu luồng (`Theo lời bình`, `1 phút`, `3 phút`, `5 phút`, `10 phút`, hoặc tự nhập `phút:giây`), tự tính đoạn mở đầu vào quỹ thời lượng, dự báo trước khi ghi và tăng tốc phân tích media.
+  - Sửa xoá sạch trạng thái DeepSeek cũ khi chuyển nguồn lời bình từ `DeepSeek` sang `Cục bộ`.
+- **Phụ đề → Project CapCut trực tiếp**:
+  - Trình xem & chỉnh sửa trực tiếp với 3 chế độ (`Giữ nguyên`, `Dễ đọc`, `Tuỳ chỉnh`), Sửa / Gộp / Tách câu giữ nguyên khoảng lặng và tạo nhanh project CapCut (tự giữ phụ đề khi gặp lỗi ghi hoặc đổi thiết lập).
+  - Sửa đếm cộng dồn chính xác khi thử lại riêng câu lỗi và tự dọn trạng thái dịch cũ khi đổi chế độ định dạng hoặc gộp/tách câu.
+- **Kết nối AI — Khôi phục DeepSeek (tuỳ chọn) & Storyboard AI (Gemini)**:
+  - Gom `Gemini API Key` và `DeepSeek API Key` vào cùng mục `Kết nối AI` trong Cài đặt (mã hoá cục bộ bằng Windows DPAPI), dùng lại luồng DeepSeek viết lời bình Review Phim và dịch phụ đề trong Phụ đề / Reup / Douyin mà vẫn giữ thứ tự và mốc giờ.
 
 ## Kiểm tra file đã tải (khuyến nghị 1 lần)
 
 Mở PowerShell tại thư mục chứa file và chạy:
 
 ```powershell
-Get-FileHash .\AutoCapCut-Setup-3.8.0.exe -Algorithm SHA256
+Get-FileHash .\AutoCapCut-Setup-3.8.1.exe -Algorithm SHA256
 ```
 
 Kết quả phải là:
 
 ```
-83bb33dba324d0fd1013b20962ca1f703ec1d8531c644d4d225db111f137ce49
+87b4cf3a3c6e3d02ca1284b63c7ea809e4fd5b78ecdf08add39022f6b890da12
 ```
 
 Mã SHA256 của mỗi phiên bản nằm trong file `checksums.txt` đi kèm release.
